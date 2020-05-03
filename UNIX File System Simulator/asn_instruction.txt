@@ -1,0 +1,64 @@
+1. discuss the data that you need to concern yourselves with and how to access it
+2. discuss operations that should be supported by your class and how to execute them.
+
+build a file manager class
+	using a collection of system calls and file I/O operations
+	each object handle a single file
+
+	Name
+		the name of the file --> class constructor
+	
+	Type 
+		regular file / directory
+		retrieved file type using stat()'s st_mode field
+			string or numeric code <- stat()'s st_mode
+
+	Size
+		using stat()'s st_size
+
+	Owner
+		who own the file
+			stat()'s st_uid field
+		keep the numeric user ID
+		keep string user name, getpwuid()
+
+	Group
+		the group of the file
+			stat()'s st_gid
+		keep the group ID
+		keep group name, getgrgid()
+
+	Permissions
+		rwx of the file
+			string or numeric code <- stat()'s st_mode
+
+	Access time
+		last access time
+			stat()'s st_aim
+
+	modification time
+		last modification
+			stat()'s st_mtim
+
+	status change time
+		stat()'s st_ctim
+
+	block size
+		use to determine the optimal chunk size for I/O operation for the file
+			stat()'s st_blksize
+
+	children(default null, interact with expand member function)
+		if file is firectory:
+			contains a collection of the file objects
+		using vector is better than array
+
+	error number(initialized to 0, 0 on each successful operation)
+		errno var will be set if wrong
+
+		cache the value from the most recent operation executed on this object
+
+		if failed, get value of errno
+
+
+16777220 4329373007 -rw-r--r-- 1 zaumukcau staff 0 6681 "Sep 23 14:39:12 2019" "Sep 23 14:39:01 2019" "Sep 23 14:39:11 2019" "Sep 23 14:39:00 2019" 4096 16 0x40 A1.py
+
