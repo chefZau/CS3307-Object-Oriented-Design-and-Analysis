@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/cs3307mock.dir/sensor.cpp.o CMakeFiles/cs3307mock.dir/light.cpp.o CMakeFiles/cs3307mock.dir/alarmLight.cpp.o CMakeFiles/cs3307mock.dir/roomLight.cpp.o CMakeFiles/cs3307mock.dir/alarm.cpp.o CMakeFiles/cs3307mock.dir/web_module.cpp.o CMakeFiles/cs3307mock.dir/room.cpp.o CMakeFiles/cs3307mock.dir/test3.cpp.o  -o cs3307mock 
